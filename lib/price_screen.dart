@@ -78,7 +78,6 @@ class _PriceScreenState extends State<PriceScreen> {
 
   List<CryptoCard> makeCards() {
     List<CryptoCard> cryptoCards = [];
-
     for (String crypto in cryptoList) {
       cryptoCards.add(
         CryptoCard(

@@ -31,7 +31,7 @@ const List<String> cryptoList = [
   'LTC',
 ];
 
-const apiKey = 'CB50A56B-FB86-496E-AAA4-7345D9ED2775';
+const apiKey = '';
 const coinAPIURL = 'https://rest.coinapi.io/v1/exchangerate';
 
 class CoinData {
@@ -46,7 +46,7 @@ class CoinData {
         String data = response.body;
         var decodedData = jsonDecode(data);
         double lastPrice = decodedData['rate'];
-        cryptoPrices['crypto'] = lastPrice.toStringAsFixed(0);
+        cryptoPrices[crypto] = lastPrice.toStringAsFixed(0);
       } else {
         print(response.statusCode);
         throw ('Problem with the get request');
